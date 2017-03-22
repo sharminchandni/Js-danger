@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All</title>
+    <link rel="shortcut icon" href="assets/images/danger.png">
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  </head>
+  <body>
+    <!-- texarea srt here -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <textarea rows="7" class="from-control"></textarea>
+          <span></span>
+          
+        </div>
+      </div>
+    </div>
+      <!-- texarea end here -->
+      <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="list-inline">
+            <li class="btn btn-danger all">All</li>
+            <li class="btn btn-danger htmlcss">Html Css</li>
+            <li class="btn btn-danger psd">Psd To Html</li>
+            <li class="btn btn-danger wordpress">Wordpress</li>
+          </ul>
+        </div>
+        <div class="col-sm-3 htmlcss">
+        <img src="assets/images/gallery1.jpg" class="img-responsive">
+        </div>
+
+         <div class="col-sm-3 htmlcss">
+        <img src="assets/images/gallery2.jpg" class="img-responsive">
+        </div>
+
+         <div class="col-sm-3 psd">
+        <img src="assets/images/gallery3.jpg" class="img-responsive">
+        </div>
+
+         <div class="col-sm-3 psd">
+        <img src="assets/images/gallery4.jpg" class="img-responsive">
+        </div>
+
+         <div class="col-sm-3 htmlcss">
+        <img src="assets/images/gallery5.jpg" class="img-responsive">
+        </div>
+
+         <div class="col-sm-3 wordpress">
+        <img src="assets/images/gallery6.jpg" class="img-responsive">
+        </div>
+
+        <div class="col-sm-3 wordpress">
+        <img src="assets/images/gallery7.jpg" class="img-responsive">
+        </div>
+
+        <div class="col-sm-3 htmlcss">
+        <img src="assets/images/gallery8.jpg" class="img-responsive">
+        </div>
+
+      </div>
+    </div>
+
+
+  <script src="jquery.min.js"></script>
+  <!-- texarea srt here -->
+    <script>
+    $(document).ready(function(){
+      $("textarea").keyup(function(){
+      var Txt= $("textarea").val();
+      $("span").text(Txt);
+    })
+    
+    })
+
+  </script>
+<!-- texarea end here -->
+<!-- web  section srt here -->
+<script>
+$(document).ready(function(){
+  $("ul li.all").click(function(){
+    $("div.htmlcss").FadeIn(1000);
+    $("div.psd").FadeIn(1000);
+    $("div.wordpress").FadeIn(1000);
+
+  });
+  $("ul li.htmlcss").click(function(){
+    $("div.htmlcss").FadeIn(1000);
+    $("div.psd").FadeOut(1000);
+    $("div.wordpress").FadeOut(1000);
+  });
+
+  $("ul li.psd").click(function(){
+    $("div.htmlcss").FadeOut(1000);
+    $("div.psd").FadeIn(1000);
+    $("div.wordpress").FadeOut(1000);
+  });
+
+  $("ul li.wordpress").click(function(){
+    $("div.htmlcss").FadeOut(1000);
+    $("div.psd").FadeOut(1000);
+    $("div.wordpress").FadeIn(1000);
+  });
+
+  })
+  
+</script>
+
+
+
+
+
+</body>
+</html>
